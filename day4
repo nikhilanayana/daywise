@@ -1,0 +1,63 @@
+call by value
+
+#include<stdio.h>
+
+int main() {
+    int a=10;
+    int b=20;
+    int c;
+    c=sum(a,b);
+    printf("sum : %d",c);
+}
+int sum(int x,int y)
+{
+    int z=x+y;
+    return z;
+}
+
+call by reference
+
+#include<stdio.h>
+void swapnum ( int *var1, int *var2 )
+{
+   int tempnum ;
+   tempnum = *var1 ;
+   *var1 = *var2 ;
+   *var2 = tempnum ;
+}
+int main( )
+{
+   int num1 = 35, num2 = 45 ;
+   printf("Before swapping:");
+   printf("\nnum1 value is %d", num1);
+   printf("\nnum2 value is %d", num2);
+
+   swapnum( &num1, &num2 );
+   printf("\nAfter swapping:");
+   printf("\nnum1 value is %d", num1);
+   printf("\nnum2 value is %d", num2);
+}
+
+Program using local and global variables\
+
+	#include<stdio.h>
+	int A;
+	int B;
+
+	int Add()
+	{
+		return A + B;
+	}
+
+	int main()
+	{
+		int answer; 
+		A = 5;
+		B = 7;
+		answer = Add();
+		printf("%d\n",answer);
+		return 0;
+	}
+
+Program to call a function within a function within a main function
+
