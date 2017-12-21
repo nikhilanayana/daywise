@@ -61,3 +61,21 @@ Program using local and global variables\
 
 Program to call a function within a function within a main function
 
+	#include<stdio.h>
+
+	void main()
+	{
+      printf("\nMain function");
+      abc();
+	}
+	void abc()
+	{
+	    printf("\nABC function");
+	    bbc();
+	}
+	void bbc()
+	{
+	    printf("\nBBC function");
+	}
+
+
