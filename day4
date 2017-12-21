@@ -91,3 +91,20 @@ Using ternary operator
 
    printf( "Value of b is %d\n", (a == 10) ? 20: 30 );
 }
+
+Static variable
+
+#include <stdio.h>
+ static int g = 5;
+ void fn(){
+ 	static int i = 0;
+ 	printf("g = %d\t", g--);
+ 	printf("i = %d\n",i++);
+ }
+int main(){
+  while(g >= 2)
+  fn();	
+  return 0;
+}
+
+
