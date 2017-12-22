@@ -1,1 +1,16 @@
+1)
+
+#include<stdio.h>
+enum state {a = 0,b,c};
+enum state currstate = 2;
+enum state findstate()
+{
+    return currstate;
+}
+
+int main()
+{
+    (findstate() == a)? printf("working"): printf("not working");
+    return 0;
+}
 
